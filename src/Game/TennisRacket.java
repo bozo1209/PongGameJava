@@ -32,7 +32,7 @@ public class TennisRacket {
 //        return player1TennisRacketInstance;
 //    }
 
-    public void move(KeyEvent e){
+    public void moveTennisRocket(KeyEvent e){
 //        System.out.println("cos sie dzieje?");
         System.out.println("e " + e);
         if (isPlayer1){

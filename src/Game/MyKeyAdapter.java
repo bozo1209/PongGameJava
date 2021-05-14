@@ -11,7 +11,7 @@ public class MyKeyAdapter extends KeyAdapter {
     @Override
     public void keyReleased(KeyEvent e) {
         super.keyReleased(e);
-        player1TennisRacket.move(e);
-        player2TennisRacket.move(e);
+        player1TennisRacket.moveTennisRocket(e);
+        player2TennisRacket.moveTennisRocket(e);
     }
 }

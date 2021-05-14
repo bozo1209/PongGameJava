@@ -1,5 +1,6 @@
 package GUI;
 
+import Game.Ball;
 import Game.TennisRacket;
 
 import javax.swing.*;
@@ -15,6 +16,7 @@ public class BoardPanel extends JPanel {
     public static TennisRacket player1TennisRacket = new TennisRacket(true);
     public static TennisRacket player2TennisRacket = new TennisRacket(false);
 
+    Ball ball = Ball.getInstance();
     Timer timer;
 
     BoardPanel(){
@@ -41,6 +43,7 @@ public class BoardPanel extends JPanel {
         timer = new Timer(1, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                ball.moveBall();
                 repaint();
             }
         });
@@ -76,5 +79,8 @@ public class BoardPanel extends JPanel {
             g.fillRect(SCREEN_WIDTH - UNIT_SIZE, player2TennisRacket.positionY[i], UNIT_SIZE, UNIT_SIZE);
 //            System.out.println("llllllllllll");
         }
+
+        g.setColor(Color.BLUE);
+        g.fillOval(ball.getCoordinateX(), ball.getCoordinateY(), UNIT_SIZE, UNIT_SIZE);
     }
 }
