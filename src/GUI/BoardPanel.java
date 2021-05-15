@@ -1,6 +1,7 @@
 package GUI;
 
 import Game.Ball;
+import Game.CollisionDetection;
 import Game.TennisRacket;
 
 import javax.swing.*;
@@ -10,7 +11,7 @@ import java.awt.event.ActionListener;
 
 public class BoardPanel extends JPanel {
 
-    public static final int SCREEN_WIDTH = 600;
+    public static final int SCREEN_WIDTH = 900;
     public static final int SCREEN_HEIGHT = 600;
     public static final int UNIT_SIZE = 25;
     public static TennisRacket player1TennisRacket = new TennisRacket(true);
@@ -18,6 +19,8 @@ public class BoardPanel extends JPanel {
 
     Ball ball = Ball.getInstance();
     Timer timer;
+
+    CollisionDetection collisionDetection = new CollisionDetection();
 
     BoardPanel(){
         this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
@@ -43,6 +46,12 @@ public class BoardPanel extends JPanel {
         timer = new Timer(1, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                collisionDetection.upperSideCollision();
+                collisionDetection.downSideCollision();
+                collisionDetection.rightSideCollision();
+                collisionDetection.leftSideCollision();
+                collisionDetection.player1RacketCollision();
+                collisionDetection.player2RacketCollision();
                 ball.moveBall();
                 repaint();
             }
@@ -63,10 +72,16 @@ public class BoardPanel extends JPanel {
 
     public void draw(Graphics g){
 
-        for (int i = 0; i < SCREEN_HEIGHT / UNIT_SIZE; i++) {
+        for (int i = 0; i < SCREEN_WIDTH / UNIT_SIZE; i++) {
             g.drawLine(i * UNIT_SIZE, 0, i * UNIT_SIZE, SCREEN_HEIGHT);
+//            g.drawLine(0, i * UNIT_SIZE, SCREEN_WIDTH, i * UNIT_SIZE);
+        }
+
+        for (int i = 0; i < SCREEN_HEIGHT / UNIT_SIZE; i++) {
+//            g.drawLine(i * UNIT_SIZE, 0, i * UNIT_SIZE, SCREEN_HEIGHT);
             g.drawLine(0, i * UNIT_SIZE, SCREEN_WIDTH, i * UNIT_SIZE);
         }
+
 
         for (int i = 0; i < player1TennisRacket.tennisRacketSize; i++){
             g.setColor(Color.RED);

@@ -16,7 +16,10 @@ public class Ball {
 
     public static Ball getInstance(){
         if (ballInstance == null){
+            System.out.println("spr");
+//            ballInstance = new Ball(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
             ballInstance = new Ball(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+
         }
         return ballInstance;
     }
@@ -45,6 +48,20 @@ public class Ball {
     public int getCoordinateY() {
         return coordinateY;
     }
+
+    public BallDirection getBallDirection(){
+        return ballDirection;
+    }
+
+//    public void resetBallInstance(){
+//        ballInstance = null;
+//    }
+
+    public void newBall(){
+        this.coordinateX = SCREEN_WIDTH / 2;
+        this.coordinateY = SCREEN_HEIGHT / 2;
+    }
+
 
 //    public String getDirection() {
 //        return direction;

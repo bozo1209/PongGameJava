@@ -34,7 +34,7 @@ public class TennisRacket {
 
     public void moveTennisRocket(KeyEvent e){
 //        System.out.println("cos sie dzieje?");
-        System.out.println("e " + e);
+//        System.out.println("e " + e);
         if (isPlayer1){
             if (e.getKeyChar() == 'w'){
                 for (int i = tennisRacketSize - 1; i >= 0; i--){
@@ -48,7 +48,7 @@ public class TennisRacket {
 //                positionY[i] = positionY[i - 1];
 //                System.out.println("typed2");
                     positionY[i] += UNIT_SIZE;
-                    System.out.println("positionY[" + i + "] = " + positionY[i]);
+//                    System.out.println("positionY[" + i + "] = " + positionY[i]);
                 }
             }
         }else {

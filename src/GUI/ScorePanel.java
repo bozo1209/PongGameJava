@@ -5,26 +5,33 @@ import java.awt.*;
 
 public class ScorePanel extends JPanel {
 
-    private int player1Score;
-    private int player2Score;
-    private final String gameScore = "Player1 " + player1Score + " : " + player2Score + " Player2 ";
-    private final JLabel scoreLabel = new JLabel(gameScore);
+    private static int player1Score;
+    private static int player2Score;
+    private static String gameScore = "Player1 " + player1Score + " : " + player2Score + " Player2 ";
+    private static final JLabel scoreLabel = new JLabel(gameScore);
+//private final JLabel scoreLabel = new JLabel();
 
     ScorePanel(){
+//        System.out.println("*************");
+//        scoreLabel.setText("dddddddddd");
         scoreLabel.setFont(new Font(null, Font.ITALIC, 35));
         this.add(scoreLabel);
         this.setBackground(Color.GRAY);
     }
 
-    public void addPlayer1ScorePoint(){
-        this.player1Score++;
+    public static void addPlayer1ScorePoint(){
+        player1Score++;
     }
 
-    public void addPlayer2ScorePoint(){
-        this.player2Score++;
+    public static void addPlayer2ScorePoint(){
+        player2Score++;
     }
 
-    public void updateGameScore(){
+    public static void updateGameScore(){
+        gameScore = "Player1 " + player1Score + " : " + player2Score + " Player2 ";
+        System.out.println(gameScore);
         scoreLabel.setText(gameScore);
+//        scoreLabel.paintImmediately(scoreLabel.getVisibleRect());
+//        scoreLabel.setText("czes");
     }
 }
