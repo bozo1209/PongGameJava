@@ -29,7 +29,7 @@ public class ScorePanel extends JPanel {
 
     public static void updateGameScore(){
         gameScore = "Player1 " + player1Score + " : " + player2Score + " Player2 ";
-        System.out.println(gameScore);
+//        System.out.println(gameScore);
         scoreLabel.setText(gameScore);
 //        scoreLabel.paintImmediately(scoreLabel.getVisibleRect());
 //        scoreLabel.setText("czes");

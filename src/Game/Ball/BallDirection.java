@@ -1,4 +1,4 @@
-package Game;
+package Game.Ball;
 
 
 public class BallDirection {

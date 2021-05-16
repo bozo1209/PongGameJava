@@ -1,5 +1,6 @@
-package Game;
+package Game.TennisRacket;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
 
 import static GUI.BoardPanel.SCREEN_HEIGHT;
@@ -10,13 +11,13 @@ public class TennisRacket {
     private final boolean isPlayer1;
 //    private static TennisRacket player1TennisRacketInstance = null;
     public int tennisRacketSize = 5;
-    public int tennisRacketUp = 0;
-    public int tennisRacketDown = 100;
+//    public int tennisRacketUp = 0;
+//    public int tennisRacketDown = 100;
     public int[] positionY = new int[SCREEN_HEIGHT];
 
     public TennisRacket(boolean isPlayer1){
         this.isPlayer1 = isPlayer1;
-        System.out.println("jestem");
+//        System.out.println("jestem");
         positionY[0] = 100;
         positionY[1] = 125;
         positionY[2] = 150;
@@ -65,10 +66,13 @@ public class TennisRacket {
                 }
             }
         }
+    }
 
-
-
-
+    public void drawTennisRacket(Graphics g, int positionX){
+        for (int i = 0; i < tennisRacketSize; i++){
+            g.setColor(Color.RED);
+            g.fillRect(positionX, positionY[i], UNIT_SIZE, UNIT_SIZE);
+        }
     }
 
 }

@@ -1,6 +1,6 @@
 package GUI;
 
-import Game.MyKeyAdapter;
+import Game.KeyAdapter.MyKeyAdapter;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,6 +10,7 @@ public class GameFrame extends JFrame {
 //    static final int SCREEN_WIDTH = 600;
 //    static final int SCREEN_HEIGHT = 600;
 //    static final int UNIT_SIZE = 25;
+    @SuppressWarnings("FieldCanBeLocal")
     private final String GAME_NAME = "Pong";
 
     public GameFrame(){
@@ -45,5 +46,6 @@ public class GameFrame extends JFrame {
 
         this.pack();
         this.setVisible(true);
+        this.setLocationRelativeTo(null);
     }
 }
