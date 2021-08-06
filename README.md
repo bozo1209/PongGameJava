@@ -26,7 +26,7 @@ To run this project download the executable file from link above and click it. R
 # Buttons
 Player one:
 - 'w' - up
-- 's' - down\
+- 's' - down
 
 Player two:
 - arrow up - up
