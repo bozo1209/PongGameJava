@@ -10,7 +10,7 @@ import java.awt.*;
 public class BoardPanel extends JPanel {
 
     public static final int SCREEN_WIDTH = 900;
-    public static final int SCREEN_HEIGHT = 600;
+    public static final int SCREEN_HEIGHT = 425;
     public static final int UNIT_SIZE = 25;
     public static final TennisRacket player1TennisRacket = new TennisRacket(true);
     public static final TennisRacket player2TennisRacket = new TennisRacket(false);

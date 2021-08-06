@@ -1,7 +1,12 @@
 package Game.CollisionDetection;
 
+import GUI.GameFrame;
 import GUI.ScorePanel;
 import Game.Ball.BallDirectionEnum;
+
+import javax.swing.*;
+
+import java.awt.*;
 
 import static GUI.BoardPanel.*;
 
@@ -13,18 +18,18 @@ public class CollisionDetection {
     public void upperSideCollision(){
 //        System.out.println("ball position x: " + ball.getCoordinateX() + " position y: " + ball.getCoordinateY());
 //        if (ball.getCoordinateY() == 0){
-            if (ball.getCoordinateY() < 0){
+        if (ball.getCoordinateY() < 0){
             ball.getBallDirection().setVertical(BallDirectionEnum.DOWN);
 //            System.out.println("odbicie");
-            ball.ballAcceleration();
+//            ball.ballAcceleration();
         }
     }
 
     public void downSideCollision(){
 //        if (ball.getCoordinateY() == SCREEN_HEIGHT - UNIT_SIZE){
-            if (ball.getCoordinateY() > SCREEN_HEIGHT - UNIT_SIZE){
+        if (ball.getCoordinateY() > SCREEN_HEIGHT - UNIT_SIZE){
             ball.getBallDirection().setVertical(BallDirectionEnum.UP);
-            ball.ballAcceleration();
+//            ball.ballAcceleration();
         }
     }
 

@@ -18,11 +18,11 @@ public class TennisRacket {
     public TennisRacket(boolean isPlayer1){
         this.isPlayer1 = isPlayer1;
 //        System.out.println("jestem");
-        positionY[0] = 100;
-        positionY[1] = 125;
-        positionY[2] = 150;
-        positionY[3] = 175;
-        positionY[4] = 200;
+        positionY[0] = 150;
+        positionY[1] = 175;
+        positionY[2] = 200;
+        positionY[3] = 225;
+        positionY[4] = 250;
 
     }
 
