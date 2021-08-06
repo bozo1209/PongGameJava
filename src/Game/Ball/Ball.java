@@ -19,8 +19,6 @@ public class Ball {
 
     public static Ball getInstance(){
         if (ballInstance == null){
-//            System.out.println("spr");
-//            ballInstance = new Ball(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
             ballInstance = new Ball(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
 
         }
@@ -29,7 +27,6 @@ public class Ball {
 
     @SuppressWarnings("PointlessArithmeticExpression")
     public void moveBall(){
-//        System.out.println("ball position x: " + coordinateX + " position y: " + coordinateY);
         if (ballDirection.getHorizontal() == BallDirectionEnum.RIGHT && ballDirection.getVertical() == BallDirectionEnum.UP){
             setCoordinate(1 * ballSpeed,-1 * ballSpeed);
         }else if (ballDirection.getHorizontal() == BallDirectionEnum.RIGHT && ballDirection.getVertical() == BallDirectionEnum.DOWN){
@@ -63,9 +60,6 @@ public class Ball {
         return ballDirection;
     }
 
-//    public void resetBallInstance(){
-//        ballInstance = null;
-//    }
 
     public void newBall(){
         this.coordinateX = SCREEN_WIDTH / 2;
@@ -78,11 +72,4 @@ public class Ball {
     }
 
 
-//    public String getDirection() {
-//        return direction;
-//    }
-//
-//    public void setDirection(String direction) {
-//        this.direction = direction;
-//    }
 }
