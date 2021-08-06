@@ -8,6 +8,7 @@
 * [Technologies Used](#technologies-used)
 * [Setup](#setup)
 * [Screenshots](#screenshots)
+* [Buttons](#buttons)
 
 ## General Information
 Pong game for two persons.
@@ -21,3 +22,11 @@ To run this project download the executable file from link above and click it. R
 
 ## Screenshots
 ![1](./screens/1.jpg)
+
+# Buttons
+Player one:
+- 'w' - up
+- 's' - down
+Player two:
+- arrow up - up
+- arrow down - down
