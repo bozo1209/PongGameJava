@@ -27,6 +27,7 @@ To run this project download the executable file from link above and click it. R
 Player one:
 - 'w' - up
 - 's' - down\
+
 Player two:
 - arrow up - up
 - arrow down - down
