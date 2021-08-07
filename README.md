@@ -1,6 +1,6 @@
 # PongGameJava
 
-> Classic pong game written in Java.\
+> Classic pong game written in Java.
 > Game demo can be download from https://github.com/bozo1209/PongGameJava/blob/master/exeFile/PongGameJava.exe.
 
 ## Table of Contents
